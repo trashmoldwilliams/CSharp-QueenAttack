@@ -9,10 +9,7 @@ namespace QueenAttackNS
     public HomeModule()
     {
       Get["/"] = _ => {
-        return View["translate.cshtml", ""];
-      };
-      Post["/leetspeak"] = _ => {
-        return View["translate.cshtml", LeetSpeak.Translate(Request.Form["english"])];
+        return View["header.cshtml"];
       };
     }
   }
