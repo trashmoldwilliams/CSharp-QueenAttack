@@ -19,7 +19,7 @@ namespace QueenAttackNS.Objects
 
     public bool CanAttack(int x, int y)
     {
-      return _x == x || _y == y;
+      return _x == x || _y == y || Math.Abs(x - _x) == Math.Abs(y - _y);
     }
 
   } // end class
