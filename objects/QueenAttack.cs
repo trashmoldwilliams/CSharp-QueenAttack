@@ -17,9 +17,9 @@ namespace QueenAttackNS.Objects
     public int GetX() { return _x; }
     public int GetY() { return _y; }
 
-    public bool CanAttack()
+    public bool CanAttack(int x, int y)
     {
-      return true;
+      return _x == x || _y == y;
     }
 
   } // end class
