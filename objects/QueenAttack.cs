@@ -7,15 +7,22 @@ namespace QueenAttackNS.Objects
   {
     private int _x;
     private int _y;
+    private static QueenAttack _currentQueenAttack;
+    public string message;
 
     public QueenAttack(int x, int y)
     {
       _x = x;
       _y = y;
+      _currentQueenAttack = this;
     }
-
+  
     public int GetX() { return _x; }
     public int GetY() { return _y; }
+
+    public static QueenAttack GetQueen() {
+      return _currentQueenAttack;
+    }
 
     public bool CanAttack(int x, int y)
     {

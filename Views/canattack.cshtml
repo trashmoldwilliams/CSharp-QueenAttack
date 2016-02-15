@@ -1,0 +1,16 @@
+@Html.Partial("header.cshtml", "attack")
+
+<h3>Your queen is at @Model.GetX(), @Model.GetY()</h3>
+<div class="output">
+  @Model.message
+</div>
+<script type="text/javascript">
+$(document).ready(function() {
+  $("[data-x=@Model.GetX()][data-y=@Model.GetY()]").toggleClass("queen");
+  $(".queen").click(function(event) {
+    event.preventDefault();
+  });
+});
+</script>
+@Html.Partial("gameboard.cshtml")
+<a class="link" href="/">Choose a new queen location</a>
